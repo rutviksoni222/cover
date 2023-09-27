@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Appurva!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f3e6e6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+        }
+
+        #content {
+            margin: 20px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        #sender {
+            font-weight: bold;
+        }
+
+        #birthday-wisher {
+            color: #ff6b6b;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        #birthday-image {
+            max-width: 50%; /* Changed to 50% to make it half the original size */
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 5px solid #ff6b6b;
+        }
+
+        #quote {
+            font-style: italic;
+        }
+
+        #signature {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #crackers {
+            display: none;
+        }
+
+        .cracker {
+            position: absolute;
+            animation: explode 1s ease-out infinite;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-50px) scale(0.1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎉 Happy Birthday, Appurva! 🎂</h1>
+    </header>
+
+    <div id="content">
+        <img id="birthday-image" src="images/appurva.jpg" alt="Appurva's Birthday" />
+
+        <div id="crackers">
+            <!-- Create cracker elements dynamically with JavaScript -->
+        </div>
+
+        <p>Dear Appurva,</p>
+        <p>On this special day, I wishes you the happiest of birthdays! 🎈</p>
+        <p>🌟 You're not just my brother, but also my best friend, and I'm grateful for all the wonderful moments we've shared together. 🌟</p>
+        <p>May this year bring you endless joy, success, and all the happiness you deserve. Keep shining and achieving your dreams! 🌠</p>
+        <p><span id="quote">"The more you praise and celebrate your life, the more there is in life to celebrate." – Oprah Winfrey</span></p>
+        <p>With lots of love and best wishes,</p>
+        <p><span id="signature">Rutvik Soni</span></p>
+    </div>
+
+    <script>
+        // Function to create and display crackers
+        function createCrackers() {
+            const crackersContainer = document.getElementById('crackers');
+            for (let i = 0; i < 10; i++) {
+                const cracker = document.createElement('div');
+                cracker.className = 'cracker';
+                cracker.style.left = Math.random() * 100 + 'vw';
+                cracker.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                crackersContainer.appendChild(cracker);
+            }
+            crackersContainer.style.display = 'block';
+        }
+
+        // Display crackers when the page loads
+        window.onload = createCrackers;
+    </script>
+</body>
+</html>
